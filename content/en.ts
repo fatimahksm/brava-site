@@ -89,7 +89,6 @@ export const en: SiteCopy = {
       { question: "How long does a project take?", answer: "It depends on the scope. After we understand what you need, we give you a clear timeline before the work starts." },
       { question: "Will my website work well on mobile?", answer: "Yes. Responsive behavior is part of the build from the beginning, not something added at the end." },
       { question: "Do you provide support after launch?", answer: "Yes. Support, fixes and future improvements can be handled based on what the project needs." },
-      { question: "Do you currently work with clients outside Lebanon?", answer: "For now, BRAVA is focused on projects and clients in Lebanon." },
     ],
   },
   frontsey: {
@@ -117,8 +116,8 @@ export const en: SiteCopy = {
       webApps: "Web App",
       customSolutions: "Custom Web Solution",
     },
-    whatsappTemplate: ({ name, contact, service, message }) =>
-      `Hi BRAVA, I'm ${name}.\nI'm interested in: ${service}.\nMy contact: ${contact}.\n\nProject idea:\n${message}`,
+    whatsappTemplate:
+      "Hi BRAVA, I'm {name}.\nI'm interested in: {service}.\nMy contact: {contact}.\n\nProject idea:\n{message}",
   },
   finalCta: {
     title: "Your idea deserves more than a draft.",

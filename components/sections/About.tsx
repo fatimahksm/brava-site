@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import type { SiteCopy } from "@/types/content";
 import { Section } from "@/components/ui/Section";
+import { BravaLogoAnimation } from "@/components/ui/BravaLogoAnimation";
 
 export function About({ copy }: { copy: SiteCopy }) {
   return (
@@ -10,8 +11,7 @@ export function About({ copy }: { copy: SiteCopy }) {
       <div className="about-grid">
         <motion.div className="about-visual" initial={{ opacity: 0, x: -36 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: .35 }} transition={{ duration: .7 }}>
           <div className="about-visual__frame">
-            <span className="about-visual__b">B</span>
-            <motion.span className="about-visual__beam" animate={{ x: ["-25%", "115%"] }} transition={{ duration: 3.2, repeat: Infinity, repeatDelay: 1.4, ease: "easeInOut" }} />
+            <div className="about-visual__logo"><BravaLogoAnimation markOnly /></div>
           </div>
         </motion.div>
         <motion.div className="about-copy" initial={{ opacity: 0, x: 36 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: .35 }} transition={{ duration: .7 }}>

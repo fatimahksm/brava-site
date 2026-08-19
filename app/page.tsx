@@ -1,26 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
 
 export default function LocaleGateway() {
   useEffect(() => {
-    const language = navigator.language.toLowerCase();
-    const locale = language.startsWith("ar") ? "ar" : language.startsWith("fr") ? "fr" : "en";
+    const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
+    const locale = languages
+      .map((value) => value.toLowerCase().split("-")[0])
+      .find((value) => value === "ar" || value === "fr" || value === "en") ?? "en";
     window.location.replace(`/${locale}/`);
   }, []);
 
-  return (
-    <main className="gateway">
-      <div className="gateway__card">
-        <p>BRAVA | Tech Solutions</p>
-        <h1>Choose your language</h1>
-        <div className="gateway__links">
-          <Link href="/en/">English</Link>
-          <Link href="/ar/">العربية</Link>
-          <Link href="/fr/">Français</Link>
-        </div>
-      </div>
-    </main>
-  );
+  return <main className="locale-redirect" aria-label="Loading BRAVA" />;
 }

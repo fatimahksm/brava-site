@@ -5,8 +5,8 @@ export const siteConfig = {
     "Websites, digital menus, web apps and custom web solutions for modern businesses in Lebanon.",
   instagram: {
     label: "@brava.tech.lb",
-    url: "https://www.instagram.com/brava.tech.lb/",
+    url: "https://www.instagram.com/brava.tech.lb?igsi=bzRneTdoeHExOWxz&utm_source=qr",
   },
-  email: "hello@your-domain.com",
-  whatsappNumber: "96100000000", // TODO: replace before launch. Digits only, with country code.
+  email: "bravaatech@gmail.com",
+  whatsappNumber: "96170914583",
 } as const;

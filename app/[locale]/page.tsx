@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { siteConfig } from "@/config/site";
 import { getCopy } from "@/content";
 import { isLocale, locales } from "@/lib/i18n";
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) return {};
   const copy = getCopy(locale);
   return {
-    title: copy.hero.eyebrow,
+    title: { absolute: siteConfig.fullName },
     description: copy.hero.description,
     alternates: {
       languages: {

@@ -77,7 +77,6 @@ export const ar: SiteCopy = {
       { question: "كم يحتاج المشروع من الوقت؟", answer: "يعتمد ذلك على حجم المشروع. بعد فهم المطلوب، نحدد مدة واضحة قبل بدء العمل." },
       { question: "هل سيعمل الموقع بشكل جيد على الموبايل؟", answer: "نعم. التصميم المتجاوب جزء أساسي من المشروع منذ البداية وليس إضافة لاحقة." },
       { question: "هل يتوفر دعم بعد الإطلاق؟", answer: "نعم. يمكننا متابعة الإصلاحات والتحديثات والتحسينات حسب حاجة المشروع." },
-      { question: "هل تعملون حالياً مع عملاء خارج لبنان؟", answer: "حالياً تركيز BRAVA الأساسي على المشاريع والعملاء داخل لبنان." },
     ],
   },
   frontsey: {
@@ -105,8 +104,8 @@ export const ar: SiteCopy = {
       webApps: "تطبيق ويب",
       customSolutions: "حل ويب مخصّص",
     },
-    whatsappTemplate: ({ name, contact, service, message }) =>
-      `مرحباً BRAVA، أنا ${name}.\nمهتم/ة بخدمة: ${service}.\nللتواصل: ${contact}.\n\nفكرة المشروع:\n${message}`,
+    whatsappTemplate:
+      "مرحباً BRAVA، أنا {name}.\nمهتم/ة بخدمة: {service}.\nللتواصل: {contact}.\n\nفكرة المشروع:\n{message}",
   },
   finalCta: {
     title: "فكرتك تستحق أكثر من أن تبقى مجرد مسودة.",

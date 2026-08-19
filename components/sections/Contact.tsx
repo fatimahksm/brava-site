@@ -10,6 +10,10 @@ import { Section } from "@/components/ui/Section";
 
 const serviceKeys: ServiceKey[] = ["websites", "digitalMenus", "webApps", "customSolutions"];
 
+function formatTemplate(template: string, values: Record<string, string>) {
+  return template.replace(/\{(name|contact|service|message)\}/g, (_, key: string) => values[key]);
+}
+
 export function Contact({ copy }: { copy: SiteCopy }) {
   const [service, setService] = useState<ServiceKey | "">("");
 
@@ -17,7 +21,7 @@ export function Contact({ copy }: { copy: SiteCopy }) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const selectedService = service ? copy.contact.serviceLabels[service] : copy.contact.selectPlaceholder;
-    const message = copy.contact.whatsappTemplate({
+    const message = formatTemplate(copy.contact.whatsappTemplate, {
       name: String(form.get("name") || ""),
       contact: String(form.get("contact") || ""),
       service: selectedService,

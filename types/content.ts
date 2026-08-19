@@ -64,12 +64,7 @@ export type SiteCopy = {
     email: string;
     instagram: string;
     serviceLabels: Record<ServiceKey, string>;
-    whatsappTemplate: (values: {
-      name: string;
-      contact: string;
-      service: string;
-      message: string;
-    }) => string;
+    whatsappTemplate: string;
   };
   finalCta: {
     title: string;

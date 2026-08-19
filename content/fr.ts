@@ -65,7 +65,6 @@ export const fr: SiteCopy = {
       { question: "Combien de temps prend un projet ?", answer: "Cela dépend du périmètre. Une fois vos besoins compris, nous définissons un délai clair avant de commencer." },
       { question: "Mon site sera-t-il adapté au mobile ?", answer: "Oui. Le responsive design fait partie du projet dès le départ, ce n’est pas une option ajoutée à la fin." },
       { question: "Proposez-vous un support après le lancement ?", answer: "Oui. Les corrections, mises à jour et améliorations futures peuvent être prises en charge selon les besoins du projet." },
-      { question: "Travaillez-vous actuellement avec des clients hors du Liban ?", answer: "Pour le moment, BRAVA se concentre principalement sur les projets et clients au Liban." },
     ],
   },
   frontsey: {
@@ -93,8 +92,8 @@ export const fr: SiteCopy = {
       webApps: "Application web",
       customSolutions: "Solution web sur mesure",
     },
-    whatsappTemplate: ({ name, contact, service, message }) =>
-      `Bonjour BRAVA, je m'appelle ${name}.\nJe suis intéressé(e) par : ${service}.\nMon contact : ${contact}.\n\nIdée du projet :\n${message}`,
+    whatsappTemplate:
+      "Bonjour BRAVA, je m'appelle {name}.\nJe suis intéressé(e) par : {service}.\nMon contact : {contact}.\n\nIdée du projet :\n{message}",
   },
   finalCta: {
     title: "Votre idée mérite mieux qu’un simple brouillon.",
